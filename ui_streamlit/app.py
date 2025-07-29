@@ -4,6 +4,8 @@ import torch
 import numpy as np
 from transformers import BertTokenizer, BertModel
 
+import os
+
 # =======================
 # Informasi Aplikasi
 # =======================
