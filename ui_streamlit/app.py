@@ -25,7 +25,10 @@ def load_all():
     kmeans = joblib.load("ui_streamlit/kmeans_model.pkl")
     svm = joblib.load("ui_streamlit/svm_model.pkl")
     label_encoder = joblib.load("ui_streamlit/label_encoder.pkl")
-    tokenizer = BertTokenizer.from_pretrained("ui_streamlit/tokenizer/")
+    
+    tokenizer_path = os.path.join(os.path.dirname(__file__), "tokenizer")
+    tokenizer = BertTokenizer.from_pretrained(tokenizer_path)
+    
     bert = BertModel.from_pretrained("indobenchmark/indobert-base-p1")
     bert.eval()
     bert.to(torch.device("cpu"))
