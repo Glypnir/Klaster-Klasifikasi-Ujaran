@@ -23,9 +23,9 @@ Model menggunakan IndoBERT sebagai representasi bahasa.
 @st.cache_resource
 def load_all():
     kmeans = joblib.load("ui_streamlit/kmeans_model.pkl")
-    svm = joblib.load("svm_model.pkl")
-    label_encoder = joblib.load("label_encoder.pkl")
-    tokenizer = BertTokenizer.from_pretrained("tokenizer")
+    svm = joblib.load("ui_streamlit/svm_model.pkl")
+    label_encoder = joblib.load("ui_streamlit/label_encoder.pkl")
+    tokenizer = BertTokenizer.from_pretrained("ui_streamlit/tokenizer")
     bert = BertModel.from_pretrained("indobenchmark/indobert-base-p1")
     bert.eval()
     bert.to(torch.device("cpu"))
