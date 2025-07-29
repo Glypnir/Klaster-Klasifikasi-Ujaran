@@ -22,7 +22,7 @@ Model menggunakan IndoBERT sebagai representasi bahasa.
 # =======================
 @st.cache_resource
 def load_all():
-    kmeans = joblib.load("kmeans_model.pkl")
+    kmeans = joblib.load("ui_streamlit/kmeans_model.pkl")
     svm = joblib.load("svm_model.pkl")
     label_encoder = joblib.load("label_encoder.pkl")
     tokenizer = BertTokenizer.from_pretrained("tokenizer")
