@@ -10,7 +10,7 @@ import os
 # Informasi Aplikasi
 # =======================
 st.set_page_config(page_title="Klasifikasi Ujaran Kasar", layout="centered")
-st.title("🗣️ Klasifikasi & Klasterisasi Ujaran Kasar Bahasa Indonesia")
+st.title("🗣️🔥 Klasifikasi & Klasterisasi Ujaran Kasar Bahasa Indonesia")
 st.write("""
 Aplikasi ini memproses kalimat masukan Anda dan memprediksi:
 - Klaster (dengan KMeans)
